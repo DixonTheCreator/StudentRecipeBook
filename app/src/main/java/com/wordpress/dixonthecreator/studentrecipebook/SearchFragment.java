@@ -17,5 +17,4 @@ public class SearchFragment extends Fragment {
     }
 
     //TODO: Searching for recipes(RecyclerView)
-
 }
