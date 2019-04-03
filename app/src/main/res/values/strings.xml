@@ -4,4 +4,8 @@
     <string name="bottom_navigation_favs">Избранное</string>
     <string name="bottom_navigation_search">Поиск</string>
     <string name="app_logo">App logo</string>
+    <string name="home_fragment_all_recipes">Все рецепты</string>
+    <string name="home_fragment_new_recipes">Новые рецепты</string>
+    <string name="all_recipes_item_name">TestName</string>
+    <string name="all_recipes_content_description">ContentDescription</string>
 </resources>

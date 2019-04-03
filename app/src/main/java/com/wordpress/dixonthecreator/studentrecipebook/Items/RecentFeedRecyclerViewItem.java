@@ -1,4 +1,4 @@
-package com.wordpress.dixonthecreator.studentrecipebook;
+package com.wordpress.dixonthecreator.studentrecipebook.Items;
 
 import android.widget.ImageView;
 import android.widget.TextView;

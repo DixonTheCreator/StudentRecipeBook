@@ -1,15 +1,17 @@
-package com.wordpress.dixonthecreator.studentrecipebook;
+package com.wordpress.dixonthecreator.studentrecipebook.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.wordpress.dixonthecreator.studentrecipebook.Fragments.FavsFragment;
+import com.wordpress.dixonthecreator.studentrecipebook.Fragments.HomeFragment;
+import com.wordpress.dixonthecreator.studentrecipebook.Fragments.SearchFragment;
+import com.wordpress.dixonthecreator.studentrecipebook.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 }
 
 

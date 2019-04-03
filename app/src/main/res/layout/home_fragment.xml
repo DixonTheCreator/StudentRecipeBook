@@ -3,8 +3,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/home_fragment_recent_feed_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:singleLine="true"
+        android:text="@string/home_fragment_new_recipes"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecentFeedRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_fragment_recent_feed_text_view"
+        />
+
+    <TextView
+        android:id="@+id/home_fragment_all_recipes_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:singleLine="true"
+        android:text="@string/home_fragment_all_recipes"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:layout_below="@id/RecentFeedRecyclerView"
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_recipes_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/home_fragment_all_recipes_text_view"
+        />
 </RelativeLayout>

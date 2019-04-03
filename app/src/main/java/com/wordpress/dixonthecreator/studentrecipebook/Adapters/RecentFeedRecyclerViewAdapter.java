@@ -1,10 +1,13 @@
-package com.wordpress.dixonthecreator.studentrecipebook;
+package com.wordpress.dixonthecreator.studentrecipebook.Adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.wordpress.dixonthecreator.studentrecipebook.R;
+import com.wordpress.dixonthecreator.studentrecipebook.Items.RecentFeedRecyclerViewItem;
 
 import java.util.ArrayList;
 
@@ -16,10 +19,10 @@ public class RecentFeedRecyclerViewAdapter extends RecyclerView.Adapter<RecentFe
     private ArrayList<RecentFeedRecyclerViewItem> itemArrayList;
 
     public static class RecyclerViewViewHolder extends RecyclerView.ViewHolder {
-        public ImageView recipeImageView;
-        public TextView recipeName;
-        public TextView priceTextView;
-        public TextView priceValueTextView;
+        private ImageView recipeImageView;
+        private TextView recipeName;
+        private TextView priceTextView;
+        private TextView priceValueTextView;
 
         public RecyclerViewViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -36,6 +39,7 @@ public class RecentFeedRecyclerViewAdapter extends RecyclerView.Adapter<RecentFe
 
     @NonNull
     @Override
+
     public RecyclerViewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recent_feed_recycler_view_item, parent, false);
         RecyclerViewViewHolder recyclerViewViewHolder = new RecyclerViewViewHolder(view);
