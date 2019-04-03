@@ -17,15 +17,15 @@ import androidx.recyclerview.widget.RecyclerView;
 public class AllItemsAdapter extends RecyclerView.Adapter<AllItemsAdapter.RecyclerViewViewHolder> {
     private ArrayList<AllRecipesItem> allRecipesItems;
 
-    public static class RecyclerViewViewHolder extends RecyclerView.ViewHolder {
+     static class RecyclerViewViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView imageResource;
         private TextView recipeName;
         private TextView contentDescription;
 
-        public RecyclerViewViewHolder(@NonNull View itemView) {
+         RecyclerViewViewHolder(@NonNull View itemView) {
             super(itemView);
-            this.imageResource = itemView.findViewById(R.id.all_recipes_item_image_view);
+            this.imageResource = itemView.findViewById(R.id.all_recipes_image_view);
             this.recipeName = itemView.findViewById(R.id.all_recipes_item_name);
             this.contentDescription = itemView.findViewById(R.id.all_recipes_item_content_description);
         }
@@ -54,7 +54,7 @@ public class AllItemsAdapter extends RecyclerView.Adapter<AllItemsAdapter.Recycl
 
     @Override
     public int getItemCount() {
-     return allRecipesItems.size();
+        return allRecipesItems.size();
     }
 
 }

@@ -8,4 +8,5 @@
     <string name="home_fragment_new_recipes">Новые рецепты</string>
     <string name="all_recipes_item_name">TestName</string>
     <string name="all_recipes_content_description">ContentDescription</string>
+    <string name="all_recipes_image_view">all_recipes_image_view</string>
 </resources>

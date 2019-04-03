@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import com.wordpress.dixonthecreator.studentrecipebook.Adapters.AllItemsAdapter;
 import com.wordpress.dixonthecreator.studentrecipebook.Adapters.RecentFeedRecyclerViewAdapter;
@@ -34,7 +36,7 @@ public class HomeFragment extends Fragment {
         setAllRecipesRecyclerViewItems();
     }
 
-    //TODO: Recently added recipes(almost done) and RecyclerView of all the recipes(almost done)
+    //TODO: Recently added recipes(almost done) and all the recipes row to load few items, not all
     //Method for recent feed adding items
     private void setRecentFeedRecyclerViewItems () {
             ArrayList<RecentFeedRecyclerViewItem> recentFeedRecyclerViewItems = new ArrayList<>();
@@ -54,21 +56,32 @@ public class HomeFragment extends Fragment {
              recentFeedRecyclerViewItems.add(new RecentFeedRecyclerViewItem(R.drawable.test_recent_feed_image_view, "Test", "Price:", "150"));
 
         }
-  //Same method for all recipes
+  //Method for all the recipes
     private void setAllRecipesRecyclerViewItems () {
             ArrayList<AllRecipesItem> allRecipesItems = new ArrayList<>();
             RecyclerView allRecipesRecyclerView = getView().findViewById(R.id.all_recipes_recycler_view);
-            allRecipesRecyclerView.setHasFixedSize(true);
             RecyclerView.Adapter allRecipesAdapter = new AllItemsAdapter(allRecipesItems);
-            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(),RecyclerView.VERTICAL, false);
-        //Adding Items
-            allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
-            allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
-            allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
-            allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
-            allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
-            allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
-            allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
+            allRecipesRecyclerView.setAdapter(allRecipesAdapter);
+            allRecipesRecyclerView.setLayoutManager(layoutManager);
+            allRecipesRecyclerView.setHasFixedSize(true);
+            allRecipesRecyclerView.setNestedScrollingEnabled(false);
 
-        }
+        //Adding Items
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+        allRecipesItems.add(new AllRecipesItem(R.drawable.test_recent_feed_image_view, "Шаверма с шавермой", "Самая лучшая шаверма за 130 рублей!"));
+
+    }
 }
